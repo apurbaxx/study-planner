@@ -1,4 +1,4 @@
-# Smart Study Planner
+# Smart Study Planner (Using Greedy Search Algorithm)
 
 A web application that helps you organize your study schedule using a priority-based algorithm.
 
