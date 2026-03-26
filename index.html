@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Study Planner</h1>
+        <p>Plan your study schedule intelligently with priority-based scheduling!</p>
+
+        <!-- Input Form -->
+        <div class="input-section">
+            <h2>Add Subject</h2>
+            <form id="subjectForm">
+                <div class="form-group">
+                    <label for="subjectName">Subject Name:</label>
+                    <input type="text" id="subjectName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hoursRequired">Hours Required:</label>
+                    <input type="number" id="hoursRequired" min="1" max="50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="difficulty">Difficulty (1-5):</label>
+                    <select id="difficulty" required>
+                        <option value="">Select difficulty</option>
+                        <option value="1">1 - Very Easy</option>
+                        <option value="2">2 - Easy</option>
+                        <option value="3">3 - Medium</option>
+                        <option value="4">4 - Hard</option>
+                        <option value="5">5 - Very Hard</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="deadline">Deadline (in days):</label>
+                    <input type="number" id="deadline" min="1" max="30" required>
+                </div>
+
+                <button type="submit">Add Subject</button>
+            </form>
+        </div>
+
+        <!-- Current Subjects -->
+        <div class="subjects-section">
+            <h2>Added Subjects</h2>
+            <div id="subjectsList">
+                <p>No subjects added yet.</p>
+            </div>
+            <button id="generateSchedule">Generate Smart Schedule</button>
+        </div>
+
+        <!-- Schedule Output -->
+        <div class="schedule-section">
+            <h2>Your Smart Study Schedule</h2>
+            <p class="study-limit">Daily Study Limit: 5 hours</p>
+            <div id="scheduleOutput">
+                <p>Add subjects and click "Generate Smart Schedule" to see your optimized study plan.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
